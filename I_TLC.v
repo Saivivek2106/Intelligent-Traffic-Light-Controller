@@ -26,8 +26,8 @@ module I_TLC(
   output reg [2:0] S   //side road light
     );
     reg [3:0] count;
-    parameter TL=10,TS=6;  //in sec
-                           //TL-> time larger, TS-> time smaller
+    parameter TL=10,TS=6;  //in sec --> no. of clock cycles
+                           //TL-> time larger for RED/ GREEN signal, TS-> time smaller for YELLOW signal
     reg [1:0] ps; //ps-->present state
     parameter s0=2'b00,s1=2'b01,s2=2'b10,s3=2'b11;
     always@(posedge clock )
