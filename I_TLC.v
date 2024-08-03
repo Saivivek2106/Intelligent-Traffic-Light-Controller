@@ -72,12 +72,12 @@ module I_TLC(
           count<=count+1;
           ps<=s2;
           end
-      else if(count==TL && ~sensor)
+        else if(count==TL && ~sensor)   //large timer has completed ,so let it go for side road green to side road yellow
           begin
           ps<=s3;
           count<=0;
           end
-      else if(~sensor && count<TL)
+        else if(~sensor && count<TL)    //this is contradicting with condition for s0
           begin
           ps<=s1;
           count<=count+1;
